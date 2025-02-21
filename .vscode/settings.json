@@ -1,0 +1,7 @@
+{
+    "flutter_intl.enabled": true,
+    "flutter_intl.main_locale": "en",
+    "flutter_intl.arb_dir": "lib/l10n",
+    "flutter_intl.output_dir": "lib/generated"
+  }
+  
