@@ -28,7 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutusparagraph": MessageLookupByLibrary.simpleMessage(
             "Welcome to AI Genie! Our app is designed to provide instant, AI-powered assistance for your daily tasks, chats, and inquiries. Whether you need quick answers, productivity tools, or engaging conversations, we\'ve got you covered.\n\nOur mission is to simplify your digital experience by offering a powerful AI assistant that is fast, accurate, and user-friendly. Our goal is to enhance your productivity and provide seamless interactions with cutting-edge technology.\n\nWhy Choose AI Genie?\n- 🤖 Smart AI Chat – Get instant answers, suggestions, and insights.\n- 🕒 Chat History – Access and review past conversations.\n- ⚙️ Customizable Settings – Personalize your experience with ease.\n- 🔒 Privacy First – Your data is secure, and we never share your information.\n\nOur Story\nAI Genie was created by a passionate team of developers and AI enthusiasts who wanted to make digital interactions more intuitive and efficient. We believe in the power of AI to make life easier and more productive.\n\nGet in Touch\nHave questions or suggestions? We’d love to hear from you!\n📧 Email: support@AI Genie.com\n🌍 Website: [AI Genie.com]"),
         "chat": MessageLookupByLibrary.simpleMessage("Chat "),
-        "chatAI": MessageLookupByLibrary.simpleMessage("Chat AI"),
+        "chatAI": MessageLookupByLibrary.simpleMessage("Chat Geine AI"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "history": MessageLookupByLibrary.simpleMessage("History"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
