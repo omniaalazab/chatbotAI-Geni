@@ -8,18 +8,7 @@ class ChatCubit extends Cubit<ChatState> {
   final ChatRepository repository;
   List<ChatMessage> _messages = [];
 
-  ChatCubit(this.repository) : super(ChatInitial()) {
-    loadChatHistory();
-  }
-
-  Future<void> loadChatHistory() async {
-    try {
-      _messages = await repository.getChatHistory();
-      emit(ChatSuccess(_messages));
-    } catch (e) {
-      emit(ChatError("Failed to load chat history", _messages));
-    }
-  }
+  ChatCubit(this.repository) : super(ChatInitial());
 
   Future<void> sendMessage(String message) async {
     if (message.isEmpty) return;
@@ -32,8 +21,6 @@ class ChatCubit extends Cubit<ChatState> {
     emit(ChatLoading(_messages));
 
     try {
-      await repository.saveChatHistory(_messages);
-
       final response = await repository.sendMessage(message);
 
       final botMessage = ChatMessage(
@@ -49,5 +36,11 @@ class ChatCubit extends Cubit<ChatState> {
       print('Error in sendMessage: $e');
       emit(ChatError("Failed to send message", _messages));
     }
+  }
+
+  // Clear chat when opening chat screen
+  void clearMessages() {
+    _messages = [];
+    emit(ChatSuccess([]));
   }
 }
