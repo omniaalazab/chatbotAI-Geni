@@ -2,9 +2,9 @@ import 'package:aichatbot/extensions/media_query_extension.dart';
 import 'package:aichatbot/generated/l10n.dart';
 import 'package:aichatbot/helper/color_helper.dart';
 import 'package:aichatbot/helper/text_style_helper.dart';
-import 'package:aichatbot/presentation/ui/screens/chat.dart';
-import 'package:aichatbot/presentation/ui/screens/history.dart';
-import 'package:aichatbot/presentation/ui/screens/settings.dart';
+import 'package:aichatbot/presentation/ui/screens/chat_screen.dart';
+import 'package:aichatbot/presentation/ui/screens/history_screen.dart';
+import 'package:aichatbot/presentation/ui/screens/settings_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -61,7 +61,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               SizedBox(
                 height: 2.h,
               ),
-              // Row of menu items
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 2.h),
                 child: Row(
@@ -88,7 +87,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-
               Expanded(
                 child: pages[selectedIndex],
               ),
