@@ -2,6 +2,7 @@ import 'package:aichatbot/data/api/chat_service.dart';
 import 'package:aichatbot/data/repository/chat_repository.dart';
 import 'package:aichatbot/generated/l10n.dart';
 import 'package:aichatbot/presentation/cubit/chat/chat_cubit.dart';
+import 'package:aichatbot/presentation/cubit/chat/history_cubit.dart';
 import 'package:aichatbot/presentation/cubit/localization/localization_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,10 +26,10 @@ class MyApp extends StatelessWidget {
       return MultiBlocProvider(
           providers: [
             BlocProvider(create: (_) => LocalizationCubit()),
-
             BlocProvider(
                 create: (_) => ChatCubit(ChatRepository(ChatService()))),
-            // BlocProvider(create: (_) => ChatMessageCubit()),
+            BlocProvider(
+                create: (_) => HistoryCubit(ChatRepository(ChatService()))),
           ],
           child: BlocBuilder<LocalizationCubit, LocalizationState>(
               builder: (context, state) {
