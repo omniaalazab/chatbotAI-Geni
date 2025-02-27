@@ -110,10 +110,10 @@ class S {
     );
   }
 
-  /// `Chat AI`
+  /// `Chat Geine AI`
   String get chatAI {
     return Intl.message(
-      'Chat AI',
+      'Chat Geine AI',
       name: 'chatAI',
       desc: '',
       args: [],
