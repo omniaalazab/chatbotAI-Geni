@@ -18,7 +18,7 @@ class Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorHelper.black,
+      // backgroundColor: ColorHelper.black,
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [

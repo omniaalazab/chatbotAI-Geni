@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: ColorHelper.black,
+      // backgroundColor: ColorHelper.black,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(

@@ -27,7 +27,7 @@ class _HistoryState extends State<History> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorHelper.black,
+      // backgroundColor: ColorHelper.black,
       body: Container(
         margin: EdgeInsets.symmetric(
             horizontal: context.screenWidth / 100,

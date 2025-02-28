@@ -16,46 +16,46 @@ class OnBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: ColorHelper.black,
+        // backgroundColor: ColorHelper.black,
         body: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: context.screenWidth / 100,
-            vertical: context.screenHeight / 100,
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 40.h,
-                  width: 100.w,
-                  child: Image.asset(
-                    "assets/images/boardimage.png",
-                    height: 40.h,
-                    width: 80.w,
-                  ),
-                ),
-                Text(S.of(context).welcome_to_ai_chatbot,
-                    textAlign: TextAlign.center,
-                    style: TextStyleHelper.textStylefontSize24.copyWith(
-                      fontWeight: FontWeight.bold,
-                    )),
-                CustomElevatedButton(
-                  buttonText: S.of(context).get_started,
-                  widthButton: 70.w,
-                  onPressedFunction: () {
-                    context.push(HomeScreen());
-                  },
-                ),
-                TextButton(
-                    onPressed: () {
-                      context.push(TemsAndConditionsScreen());
-                    },
-                    child: Text(
-                      S.of(context).terms_and_conditions,
-                      style: TextStyleHelper.textStylefontSize18,
-                    )),
-              ]),
-        ));
+      padding: EdgeInsets.symmetric(
+        horizontal: context.screenWidth / 100,
+        vertical: context.screenHeight / 100,
+      ),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 40.h,
+              width: 100.w,
+              child: Image.asset(
+                "assets/images/boardimage.png",
+                height: 40.h,
+                width: 80.w,
+              ),
+            ),
+            Text(S.of(context).welcome_to_ai_chatbot,
+                textAlign: TextAlign.center,
+                style: TextStyleHelper.textStylefontSize24.copyWith(
+                  fontWeight: FontWeight.bold,
+                )),
+            CustomElevatedButton(
+              buttonText: S.of(context).get_started,
+              widthButton: 70.w,
+              onPressedFunction: () {
+                context.push(HomeScreen());
+              },
+            ),
+            TextButton(
+                onPressed: () {
+                  context.push(TemsAndConditionsScreen());
+                },
+                child: Text(
+                  S.of(context).terms_and_conditions,
+                  style: TextStyleHelper.textStylefontSize18,
+                )),
+          ]),
+    ));
   }
 }

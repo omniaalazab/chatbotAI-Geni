@@ -16,47 +16,47 @@ class SwitchLanguage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: ColorHelper.black,
+        // backgroundColor: ColorHelper.black,
         body: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: context.screenWidth / 80,
-              vertical: context.screenHeight / 80,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: context.screenWidth / 80,
+          vertical: context.screenHeight / 80,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: 80.w,
+              height: 20.h,
+              child: BackButtonWithTitle(
+                title: S.of(context).language,
+                onPressed: () {
+                  context.pop();
+                },
+              ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 80.w,
-                  height: 20.h,
-                  child: BackButtonWithTitle(
-                    title: S.of(context).language,
-                    onPressed: () {
-                      context.pop();
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 5.h,
-                ),
-                AppLanguageRow(
-                  imagePath: "assets/images/enflag1.png",
-                  text: S.of(context).English,
-                  onTapFunction: () {
-                    context.read<LocalizationCubit>().switchToEnglish();
-                  },
-                ),
-                AppLanguageRow(
-                  imagePath: "assets/images/arflag.png",
-                  text: S.of(context).Arabic,
-                  onTapFunction: () {
-                    context.read<LocalizationCubit>().switchToArabic();
-                  },
-                ),
-              ],
+            SizedBox(
+              height: 5.h,
             ),
-          ),
-        ));
+            AppLanguageRow(
+              imagePath: "assets/images/enflag1.png",
+              text: S.of(context).English,
+              onTapFunction: () {
+                context.read<LocalizationCubit>().switchToEnglish();
+              },
+            ),
+            AppLanguageRow(
+              imagePath: "assets/images/arflag.png",
+              text: S.of(context).Arabic,
+              onTapFunction: () {
+                context.read<LocalizationCubit>().switchToArabic();
+              },
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 }

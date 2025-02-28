@@ -14,7 +14,7 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorHelper.black,
+      // backgroundColor: ColorHelper.black,
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: context.screenWidth / 40,

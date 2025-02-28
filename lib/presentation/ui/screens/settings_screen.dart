@@ -2,10 +2,12 @@ import 'package:aichatbot/extensions/navigation_extension.dart';
 import 'package:aichatbot/generated/l10n.dart';
 import 'package:aichatbot/helper/color_helper.dart';
 import 'package:aichatbot/helper/text_style_helper.dart';
+import 'package:aichatbot/presentation/cubit/theme/theme_cubit.dart';
 import 'package:aichatbot/presentation/ui/screens/about_us.dart';
 import 'package:aichatbot/presentation/ui/screens/switch_langauage_screen.dart';
 import 'package:aichatbot/presentation/ui/screens/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 class Settings extends StatelessWidget {
@@ -14,7 +16,7 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorHelper.black,
+      // backgroundColor: ColorHelper.black,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -50,6 +52,17 @@ class Settings extends StatelessWidget {
             icon: Icon(Icons.language),
             color: ColorHelper.grey,
           ),
+          Row(
+            children: [
+              Icon(Icons.dark_mode),
+              Switch(
+                value: context.watch<ThemeCubit>().state == ThemeMode.dark,
+                onChanged: (value) {
+                  context.read<ThemeCubit>().toggleTheme(value);
+                },
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -77,8 +90,9 @@ class SettingContainerRow extends StatelessWidget {
         onTap: onPressed,
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: ColorHelper.black1),
+            borderRadius: BorderRadius.circular(10),
+            // color: ColorHelper.black1
+          ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 2.w),
             child: Row(
