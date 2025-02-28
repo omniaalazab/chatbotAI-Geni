@@ -7,7 +7,7 @@ import 'package:aichatbot/presentation/ui/screens/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../../extensions/media_query_extension.dart';
-import '../../../helper/color_helper.dart';
+
 import '../widget/common_widget/custom_elevated_button.dart';
 
 class OnBoardScreen extends StatelessWidget {

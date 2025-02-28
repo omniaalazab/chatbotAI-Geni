@@ -1,5 +1,5 @@
 import 'package:aichatbot/extensions/media_query_extension.dart';
-import 'package:aichatbot/helper/color_helper.dart';
+
 import 'package:aichatbot/helper/text_style_helper.dart';
 import 'package:aichatbot/presentation/cubit/chat/chat_state.dart';
 import 'package:aichatbot/presentation/cubit/chat/history_cubit.dart';

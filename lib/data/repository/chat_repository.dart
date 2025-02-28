@@ -23,7 +23,7 @@ class ChatRepository {
       }
       return [];
     } catch (e) {
-      print('Error loading chat history: $e');
+      // print('Error loading chat history: $e');
       return [];
     }
   }
@@ -36,7 +36,7 @@ class ChatRepository {
       );
       await prefs.setString("chatHistory", encoded);
     } catch (e) {
-      print('Error saving chat history: $e');
+      // print('Error saving chat history: $e');
       throw Exception('Failed to save chat history');
     }
   }

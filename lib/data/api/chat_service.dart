@@ -1,12 +1,16 @@
-import 'package:aichatbot/core/api_constant.dart';
 import 'package:aichatbot/helper/dio_helper.dart';
 import 'package:dio/dio.dart';
 
 class ChatService {
+  static String baseUrl =
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKeyGemini";
+
+  static String apiKeyGemini = "AIzaSyCs916AJNEqgW5e4v5DOenm3vgnviM2R08";
+
   Future<String> sendMessage(String message) async {
     try {
       final response = await DioHelper.dio.post(
-        APIConstant.baseUrl,
+        baseUrl,
         options: Options(headers: {
           "Content-Type": "application/json",
         }),

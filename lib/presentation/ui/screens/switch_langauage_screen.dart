@@ -1,7 +1,7 @@
 import 'package:aichatbot/extensions/media_query_extension.dart';
 import 'package:aichatbot/extensions/navigation_extension.dart';
 import 'package:aichatbot/generated/l10n.dart';
-import 'package:aichatbot/helper/color_helper.dart';
+
 import 'package:aichatbot/presentation/cubit/localization/localization_cubit.dart';
 
 import 'package:aichatbot/presentation/ui/widget/app_language_row.dart';

@@ -33,7 +33,7 @@ class ChatCubit extends Cubit<ChatState> {
 
       emit(ChatSuccess(_messages));
     } catch (e) {
-      print('Error in sendMessage: $e');
+      // print('Error in sendMessage: $e');
       emit(ChatError("Failed to send message", _messages));
     }
   }
