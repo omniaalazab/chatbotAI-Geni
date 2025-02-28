@@ -1,16 +1,29 @@
-# aichatbot
+🚀 AI Chatbot - Geni
+A smart AI chatbot built with Flutter, featuring real-time conversations, chat history, and multi-language support.
 
-A new Flutter project.
+📱 Features
+Splash Screen – Implemented using flutter_native_splash for a seamless startup experience.
+Onboarding Page – Helps users get started with key app features.
+Home Screen – Provides easy access to:
+✨ Chat – AI-powered chatbot for intelligent conversations.
+🕒 Chat History – View past interactions.
+⚙️ Settings – Manage app preferences.
+Settings Screen includes:
+📜 Terms & Conditions – Legal information.
+ℹ️ About Us – Learn more about the app.
+🌍 Language Selection – Switch between Arabic and English.
+🌙 switch theme - Switch dark - light mood
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🛠️ Tech Stack
+Flutter (Dart)
+Flutter Bloc – State management
+Firebase – Backend services (optional)
+Dio – HTTP requests
+flutter_native_splash – Custom splash screen
+📸 Screenshots![WhatsApp Image 2025-02-21 at 10 56 57 PM](https://github.com/user-attachments/assets/4e8767b1-5f7b-4725-997d-c06422136eac)
+![WhatsApp Image 2025-02-21 at 10 56 57 PM (3)](https://github.com/user-attachments/assets/d2f47714-7b6e-49bb-9165-935705163539)
+![WhatsApp Image 2025-02-21 at 10 56 57 PM (2)](https://github.com/user-attachments/assets/7a24a9c6-00e5-4d0e-b713-2a298db7d353)
+![WhatsApp Image 2025-02-21 at 10 56 57 PM (1)](https://github.com/user-attachments/assets/6e789ed2-9b49-4a31-9b2f-a0be11693581)
+![WhatsApp Image 2025-02-21 at 10 56 56 PM](https://github.com/user-attachments/assets/d4eba85a-7648-40e0-a477-11bb3a3f036f)
+![WhatsApp Image 2025-02-21 at 9 56 57 AM (2)](https://github.com/user-attachments/assets/ade546fd-2db3-4970-bfbf-2d900a624d5e)
+![WhatsApp Image 2025-02-21 at 9 56 57 AM (1)](https://github.com/user-attachments/assets/dc434469-6427-4272-8366-74a4978a8d17)
