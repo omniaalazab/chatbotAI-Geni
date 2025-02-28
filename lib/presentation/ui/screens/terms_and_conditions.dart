@@ -1,7 +1,6 @@
 import 'package:aichatbot/extensions/media_query_extension.dart';
 import 'package:aichatbot/extensions/navigation_extension.dart';
 import 'package:aichatbot/generated/l10n.dart';
-import 'package:aichatbot/helper/color_helper.dart';
 
 import 'package:aichatbot/presentation/ui/widget/back_button_with_title.dart';
 import 'package:flutter/material.dart';
