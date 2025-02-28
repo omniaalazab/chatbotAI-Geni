@@ -1,9 +1,11 @@
 import 'package:aichatbot/data/api/chat_service.dart';
 import 'package:aichatbot/data/repository/chat_repository.dart';
 import 'package:aichatbot/generated/l10n.dart';
+import 'package:aichatbot/helper/color_helper.dart';
 import 'package:aichatbot/presentation/cubit/chat/chat_cubit.dart';
 import 'package:aichatbot/presentation/cubit/chat/history_cubit.dart';
 import 'package:aichatbot/presentation/cubit/localization/localization_cubit.dart';
+import 'package:aichatbot/presentation/cubit/theme/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -30,22 +32,38 @@ class MyApp extends StatelessWidget {
                 create: (_) => ChatCubit(ChatRepository(ChatService()))),
             BlocProvider(
                 create: (_) => HistoryCubit(ChatRepository(ChatService()))),
+            BlocProvider(create: (_) => ThemeCubit()),
           ],
-          child: BlocBuilder<LocalizationCubit, LocalizationState>(
-              builder: (context, state) {
-            return MaterialApp(
-              locale: state.locale,
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-              ],
-              supportedLocales: S.delegate.supportedLocales,
-              debugShowCheckedModeBanner: false,
-              home: OnBoardScreen(),
-            );
-          }));
+          child: BlocBuilder<ThemeCubit, ThemeMode>(
+            builder: (context, themeMode) {
+              return BlocBuilder<LocalizationCubit, LocalizationState>(
+                  builder: (context, state) {
+                return MaterialApp(
+                  locale: state.locale,
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
+                  debugShowCheckedModeBanner: false,
+                  themeMode: themeMode,
+                  theme: ThemeData(
+                    primarySwatch: Colors.blue,
+                    scaffoldBackgroundColor: Colors.white,
+                    brightness: Brightness.light,
+                  ),
+                  darkTheme: ThemeData(
+                    primarySwatch: Colors.deepPurple,
+                    scaffoldBackgroundColor: ColorHelper.black,
+                    brightness: Brightness.dark,
+                  ),
+                  home: OnBoardScreen(),
+                );
+              });
+            },
+          ));
     });
   }
 }
