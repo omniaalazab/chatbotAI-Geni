@@ -28,5 +28,3 @@ flutter_native_splash – Custom splash screen
 
 ![WhatsApp Image 2025-02-21 at 10 56 57 PM (1)](https://github.com/user-attachments/assets/6e789ed2-9b49-4a31-9b2f-a0be11693581)
 ![WhatsApp Image 2025-02-21 at 10 56 56 PM](https://github.com/user-attachments/assets/d4eba85a-7648-40e0-a477-11bb3a3f036f)
-![WhatsApp Image 2025-02-21 at 9 56 57 AM (2)](https://github.com/user-attachments/assets/ade546fd-2db3-4970-bfbf-2d900a624d5e)
-![WhatsApp Image 2025-02-21 at 9 56 57 AM (1)](https://github.com/user-attachments/assets/dc434469-6427-4272-8366-74a4978a8d17)
